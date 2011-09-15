@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+	/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -49,3 +49,6 @@ table {
 
 /* Add Styles Here */
 body { font-family:Times; font-size:14px; }
+
+#title h1 { font-family:Helvetica; font-size:48px; background-color: #575757; text-align: center; color: #000000 }
+header { height: 100px; background-color: #551A8B }
