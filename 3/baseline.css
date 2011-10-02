@@ -101,19 +101,10 @@ margin:10px;
 float:left;
 }
 
-footer#site-footer {     clear:both; background-color:black;     color:white; padding:10px 0px;  }/* Clearfix */
-.clearfix:after {
-	content: "section";
-	display: block;
-	clear: both;
-	visibility:hidden;
-	line-height: 0;
-	height: 0;
+#main-footer {
+clear:both;
+padding:10px 0px;
 }
-.clearfix { display: inline-block; }
-html[xmlns] .clearfix { display: block; }
-* html .clearfix { height: 1%; }
-body { width:960px; margin:0 auto; }
 
 li {
 font-family:Georgia;
