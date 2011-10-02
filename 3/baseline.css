@@ -59,8 +59,8 @@ body {
 width:960px; margin:0 auto;
 }
 		
-header#site-header {
-  position:relative; height:80px;
+header#main-header {
+  position:relative; height:130px; padding-top:30px;
 }
 
 header h1 a { 
@@ -70,22 +70,23 @@ header h1 a {
   width:960px; height:100px;
   background:url(dogvscat-logo.gif) no-repeat top;
 }
-nav#top-menu { position:relative; left:120px; top:120px; }
+nav#top-menu { position:relative; top:120px; text-align:center;}
 
 nav#top-menu { height:30px;
 background-color:white;
 border-top-style:solid;
+border-color:black;
 border-bottom-style:solid;
 border-width:5px;
 }
-nav#top-menu ul li { display:inline; float:left; padding:0 20px; }
-nav#top-menu ul li a { display:block; color:black; padding:5px 5px; }
+nav#top-menu ul li { display:inline; float:left; padding:3px 45px 3px; }
+nav#top-menu ul li a { display:block; color:black; padding:5px 5px; text-decoration:none;}
 
 section#main-body {
 position:relative;
 float:left;
 width:960px;
-padding:50px 20px;
+padding:50px 10px;
 }
 
 
@@ -105,7 +106,7 @@ footer#site-footer {     clear:both; background-color:black;     color:white
 	content: "section";
 	display: block;
 	clear: both;
-	visibility: hidden;
+	visibility:hidden;
 	line-height: 0;
 	height: 0;
 }
@@ -123,31 +124,31 @@ font-size:20px;
 font-family:Georgia;
 font-size:14px;
 border-top-style:solid;
+border-color:black;
 border-width:5px;
+padding-left:20px;
+padding-right:20px;
 }
 #main-footer a {
 color:pink;
 border:5px 5px;
 }
 #wiki{
-position:absolute;
-left:25px;
-display:inline;
+float:left;
 }
 #copyright{
-position:absolute;
-right:25px;
-display:inline;
+float:right;
 }
 .blog-post h2 {
 font-family:Georgia;
 font-size:22px;
 font-weight:bold;
+padding-bottom:10px;
 }
 .blog-post p {
 font-family:Georgia;
 font-size:16px;
-padding:10px;
+line-height:1.2em;
 }
 .centered img {
 width:450px;
