@@ -76,7 +76,9 @@ nav#main-menu ul li a { display:block; color:white; padding:5px 5px; text-decora
 nav#main-menu ul li a:hover {
 color:green;
 }
-
+#site-wrapper, #menu-wrapper, #content-wrapper, #footer-wrapper {
+width: 100%;
+}
 article#page { float:left; width:550px; padding:50px 20px; }
 aside#sidebar { float:right; width:220px; padding:50px 10px; }
 
