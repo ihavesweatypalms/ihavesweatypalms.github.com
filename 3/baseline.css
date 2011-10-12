@@ -64,11 +64,27 @@ header#main-header {
 }
 
 header h1 a { 
-  display:block;	
-  text-indent:-9999px;    
+  text-decoration:none;
   position:absolute;
+  top:10px;
+  left:350px;
   width:960px; height:100px;
-  background:url(dogvscat-logo.gif) no-repeat top;
+}
+.gothic {
+font-family:League Gothic, Helvetica, sans-serif;
+font-size:80px;
+color:black;
+float:left;
+}
+.georgia{
+font-family:Georgia;
+font-size:40px;
+font-weight:bold;
+color:lightgray;
+float:left;
+padding-top:15px;
+padding-left:10px;
+padding-right:10px;
 }
 nav#top-menu { position:relative; top:120px; text-align:center;}
 

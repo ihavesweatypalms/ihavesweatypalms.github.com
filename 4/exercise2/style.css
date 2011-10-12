@@ -68,11 +68,10 @@ header#site-header {
 }
 nav#top-nav {position:absolute; right:0; top:0; padding:5px;}
 nav#top-nav a {text-decoration:none; color:#5C3317; font-size:12px;}
-nav#menu-wrapper { position:absolute; right:120px; top:120px;}
 
 nav#main-menu { height:30px; background-color:#5C3317; text-transform:uppercase;}
-nav#main-menu ul li { display:block; float:left; padding:0 5px; }
-nav#main-menu ul li a { display:block; color:white; padding:5px 5px; text-decoration:none; }
+nav#main-menu ul li { display:inline; padding:0 5px; }
+nav#main-menu ul li a { display:inline; color:white; padding:5px 5px; text-decoration:none; }
 nav#main-menu ul li a:hover {
 color:green;
 }
