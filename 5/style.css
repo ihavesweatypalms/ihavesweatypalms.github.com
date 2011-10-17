@@ -46,3 +46,60 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+body {
+	width:960px; margin:0 auto; 
+	font-family:georgia;
+}
+		
+header {
+  position:relative; height:150px;
+  background-color:#FFADB9;
+}
+
+header h1 {     
+  position:absolute;
+  font-family:league gothic, helvetica, sans-serif;
+  font-size:90px;
+  color:#575757;
+  text-align:center;
+  text-transform:uppercase;
+  text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;
+}
+nav {position:absolute; right:0; top:0; padding:5px;}
+nav a {text-decoration:none; color:#575757; font-size:20px; font-family:league gothic, helvetica, sans-serif;}
+nav a:hover {color:white;}
+
+article { float:left; width:550px; padding:50px 20px; }
+section#sidebar { float:right; width:220px; padding:20px 10px; }
+
+#sidebar h1 {
+font-family:futura;
+font-size:24px;
+color:#575757;
+text-transform:uppercase;
+}
+
+p {
+font-size:15px;
+line-height:1.2em;
+padding-top:10px;
+color:gray;
+}
+
+footer { clear:both; background-color:#FFADB9; color:white; padding:10px 10px; height:100px; }
+
+#content h1 {
+font-family: league gothic, helvetica, sans-serif;
+text-transform:uppercase;
+font-size:30px;
+color:#575757;
+}
+article #blog-post {
+}
+
+footer a {
+text-decoration:none;
+font-family:league gothic, helvetica, sans-serif;
+color:#575757;
+font-size:20px
+}
