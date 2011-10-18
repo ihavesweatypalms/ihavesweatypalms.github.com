@@ -46,6 +46,16 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+@font-face {
+    font-family: 'LeagueGothicRegular';
+    src: url(League-Gothic-fontfacekit/League_Gothic-webfont.eot);
+    src: url(League-Gothic-fontfacekit/League_Gothic-webfont.eot?#iefix) format('embedded-opentype'),
+         url(League-Gothic-fontfacekit/League_Gothic-webfont.woff) format('woff'),
+         url(League-Gothic-fontfacekit/League_Gothic-webfont.ttf) format('truetype'),
+         url(League-Gothic-fontfacekit/League_Gothic-webfont.svg#LeagueGothicRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+    }
 body {
 	width:960px; margin:0 auto; 
 	font-family:georgia;
@@ -58,7 +68,7 @@ header {
 
 header h1 {     
   position:absolute;
-  font-family:league gothic, helvetica, sans-serif;
+  font-family:'LeagueGothicRegular', helvetica, sans-serif;
   font-size:90px;
   color:#575757;
   text-align:center;
@@ -90,7 +100,7 @@ color:gray;
 footer { clear:both; background-color:#FFADB9; color:white; padding:10px 10px; height:100px; }
 
 #content h1 {
-font-family: league gothic, helvetica, sans-serif;
+font-family: 'LeagueGothicRegular', helvetica, sans-serif;
 text-transform:uppercase;
 font-size:30px;
 color:#575757;
@@ -101,7 +111,7 @@ article #blog-post {
 footer a {
 text-decoration:none;
 text-transform:uppercase;
-font-family:league gothic, helvetica, sans-serif;
+font-family:'leaguegothicregular', helvetica, sans-serif;
 color:#575757;
 font-size:20px
 }
