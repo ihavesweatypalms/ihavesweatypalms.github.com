@@ -1,0 +1,24 @@
+body {
+  width:960px;
+  margin:0 auto; 
+}
+#feed-name {
+  padding-top:40px;
+  padding-bottom:20px;
+  padding-left:25px;
+  font-size:60px;
+  color:#321239;
+}
+#feed {
+  font-size:14px;
+  line-height:1.5em;
+  padding-left: 50px;
+  padding-bottom:20px;
+  padding-top:20px;
+  border: solid black 10px;
+}
+#slider {
+position:absolute;
+left:50px;
+top:40px;
+}

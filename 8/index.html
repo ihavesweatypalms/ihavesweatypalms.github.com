@@ -5,25 +5,58 @@
 	<title></title>
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js'></script>
 	<link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-1.1.1.min.css">
-
+    <link rel="stylesheet" href="nivo-slider.css" type="text/css" media="screen" />
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+	<script src="jquery.nivo.slider.pack.js" type="text/javascript"></script>
+	<link rel='stylesheet' href='style.css' type='text/css' media='screen' />
 </head>
 <body>
 <script>
   $(document).ready(function() {
-    var username = 'aplusk';
+    var username = 'certaintragedy';
     var count = 10;
-    $.getJSON('http://twitter.com/statuses/user_timeline/' + username + '.json?callback=?',
-    function(data) {
-      console.log(data);
-    });
+    $.getJSON('http://twitter.com/statuses/user_timeline/certaintragedy.json?callback=?',
+    function(data){
+    $('#feed-name').text(username + "'s Twitter feed");
+    $('#feed').text(data[0].text);
+    $.each(data,function() {
+      console.log(this.text);
+      $('<div></div>').text(this.text).appendTo('#feed');
+    	});
+	});
   });
+$(window).load(function() {
+    $('#slider').nivoSlider();
+});
 </script>
+<style>
+.nivoSlider {
+    position:relative;
+    width:618px; /* Change this to your images width */
+    height:246px; /* Change this to your images height */
+    background:url(images/loading.gif) no-repeat 50% 50%;
+}
+.nivoSlider img {
+    position:absolute;
+    top:0px;
+    left:0px;
+    display:none;
+}
+.nivoSlider a {
+    border:0;
+    display:block;
+}
+</style>
 
 <h1 id='feed-name'></h1>
 <div id='feed'>
+
 </div>
-
-
-
+<div id="slider" class="nivoSlider">
+    <img src="images/occupyallston.jpg" alt="Occupy-Allston" title="My Halloween Costume"/>
+    <a href="http://twitpic.com/773jaf"><img src="images/dunkinhalloween.jpg" alt="" title="A Very Dunkin Halloween" /></a>
+    <img src="images/analogtweet.jpg" alt="analog-tweet" title="Analog Tweeting" />
+</div>
 </body>
 </html>
+
