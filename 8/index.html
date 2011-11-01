@@ -18,7 +18,7 @@
     var count = 10;
     $.getJSON('http://twitter.com/statuses/user_timeline/certaintragedy.json?callback=?',
     function(data){
-    $('#feed-name').text(username + "'s Twitter feed");
+    $('#feed-name').text(username + "'s twitter feed");
     $('#feed').text(data[0].text);
     $.each(data,function() {
       console.log(this.text);
@@ -30,36 +30,29 @@ $(window).load(function() {
     $('#slider').nivoSlider();
 });
 </script>
-<style>
-.nivoSlider {
-    position:relative;
-    width:618px; /* Change this to your images width */
-    height:246px; /* Change this to your images height */
-    background:url(images/loading.gif) no-repeat 50% 50%;
-}
-.nivoSlider img {
-    position:absolute;
-    top:0px;
-    left:0px;
-    display:none;
-}
-.nivoSlider a {
-    border:0;
-    display:block;
-}
-</style>
-
+<header id='main-header'>
+<h1 id='main-title'>Christine Varriale is weird</h1>
+</header>
+<section id='main-body'>
+<article id='random-words'><p> This is Christine. She loves puppies, Ryan Gosling, Lindsay Lohan and vegetable dumplings. She makes videos sometimes at <a href='http://www.gemvara.com'>Gemvara</a> and reviews bands at <a href='http://www.allstonpudding.com'>Allston Pudding</a>. Social Media is her life.</p>
+</article>
+<article class="slider-wrapper theme-default">
+<div id="slider" class="nivoSlider">
+    <img src="images/occupyallston.jpg" alt="Occupy-Allston" title="I love Halloween"/>
+    <img src="images/dunkinhalloween.jpg" alt="dunk-halloween" title="A Very Dunkin Halloween" /></a>
+    <img src="images/analogtweet.jpg" alt="analog-tweet" title="Analog Tweeting" />
+</div>
+</article>
+</section>
+<section id='twitter'>
 <h1 id='feed-name'></h1>
 <div id='feed'>
 
 </div>
-<article class="slider-wrapper theme-default">
-<div id="slider" class="nivoSlider">
-    <img src="images/occupyallston.jpg" alt="Occupy-Allston" title="My Halloween Costume"/>
-    <a href="http://twitpic.com/773jaf"><img src="images/dunkinhalloween.jpg" alt="" title="A Very Dunkin Halloween" /></a>
-    <img src="images/analogtweet.jpg" alt="analog-tweet" title="Analog Tweeting" />
-</div>
-</article>
+</section>
+<footer id='main-footer'>
+<p>©2011 Christine Varriale</p>
+</footer>
 </body>
 </html>
 
