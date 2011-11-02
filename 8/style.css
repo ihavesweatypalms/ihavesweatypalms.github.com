@@ -5,12 +5,33 @@ body {
 #main-header {
   float:left;
 }
+#main-nav {
+  clear:both;
+  float:left;
+  top:120px;
+  clear:both;
+  padding:5px;
+  background-color:#575757;
+}
+#nav-list li {
+  float:left;
+  padding-left:50px;
+  padding-right:50px;
+}
+#nav-list a {
+  text-transform:uppercase;
+  text-decoration:none;
+  color:white;
+  padding:5px;
+  font-size:16px;
+}
 #main-title {
   font-size:60px;
-  padding:90px;
+  padding:40px;
   text-shadow: 3px 3px 0 #ffd217, 5px 5px 0 #5ac7ff, 10px 10px 0 #ffd217, 20px 20px 0 #5ac7ff;
 }
 #main-body {
+  padding-top:40px;
   float:left;
   width:600px;
   padding-right:135px;
@@ -30,6 +51,7 @@ a:hover {
   margin-top:100px;
 }
 #twitter {
+  margin-top:40px;
   float:left;
 }
 #feed-name {
