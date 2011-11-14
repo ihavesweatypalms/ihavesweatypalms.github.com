@@ -21,8 +21,30 @@
     $('#feed-name').text(username + "'s twitter feed");
     $('#feed').text(data[0].text);
     $.each(data,function() {
-      console.log(this.text);
-      $('<div></div>').text(this.text).appendTo('#feed');
+      var ify = function() {
+  return {
+    "link": function(t) {
+      return t.replace(/(^|\s+)(https*\:\/\/\S+[^\.\s+])/g, function(m, m1, link) {
+        return m1 + '<a href=' + link + '>' + ((link.length > 25) ? link.substr(0, 24) + '...' : link) + '</a>';
+      });
+    },
+    "at": function(t) {
+      return t.replace(/(^|\s+)\@([a-zA-Z0-9_]{1,15})/g, function(m, m1, m2) {
+        return m1 + '@<a href="http://twitter.com/' + m2 + '">' + m2 + '</a>';
+      });
+    },
+    "hash": function(t) {
+      return t.replace(/(^|\s+)\#([a-zA-Z0-9_]+)/g, function(m, m1, m2) {
+        return m1 + '#<a href="http://search.twitter.com/search?q=%23' + m2 + '">' + m2 + '</a>';
+      });
+    },
+    "clean": function(tweet) {
+      return this.hash(this.at(this.link(tweet)));
+    }
+  };
+}();
+      
+      $('<div></div>').html(ify.clean(this.text)).appendTo('#feed');
     	});
 	});
   });
@@ -30,6 +52,7 @@ $(window).load(function() {
     $('#slider').nivoSlider();
 });
 </script>
+<div id='header-wrapper'>
 <header id='main-header'>
 <h1 id='main-title'>Christine Varriale is weird</h1>
 </header>
@@ -42,6 +65,8 @@ $(window).load(function() {
 <li><a href='http://www.christinevarriale.com/contact'>Contact</a></li>
 </ul>
 </nav>
+</div>
+<div id='important'>
 <section id='main-body'>
 <article id='random-words'><p> This is Christine. She loves puppies, Ryan Gosling, Lindsay Lohan and vegetable dumplings. She makes videos sometimes at <a href='http://www.gemvara.com'>Gemvara</a> and reviews bands at <a href='http://www.allstonpudding.com'>Allston Pudding</a>. Social Media is her life.</p>
 </article>
@@ -52,12 +77,13 @@ $(window).load(function() {
     <img src="images/analogtweet.jpg" alt="analog-tweet" title="Analog Tweeting" />
 </div>
 </article>
-</section>
+</div>
 <section id='twitter'>
 <h1 id='feed-name'></h1>
 <div id='feed'>
 
 </div>
+</section>
 </section>
 <footer id='main-footer'>
 <p>©2011 Christine Varriale</p>

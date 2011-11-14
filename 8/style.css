@@ -1,7 +1,13 @@
 body {
-  width:960px;
+  width:100%
   margin:0 auto; 
 }
+#header-wrapper {
+  position:absolute;
+  top:0;
+  left:0;
+}
+
 #main-header {
   float:left;
 }
@@ -9,20 +15,21 @@ body {
   clear:both;
   float:left;
   top:120px;
-  clear:both;
-  padding:5px;
   background-color:#575757;
+  width:100%;
 }
 #nav-list li {
   float:left;
-  padding-left:50px;
-  padding-right:50px;
+  padding-left:110px;
+  padding-right:110px;
+  display:inline;
+  padding-top:10px;
+  padding-bottom:10px;
 }
 #nav-list a {
   text-transform:uppercase;
   text-decoration:none;
   color:white;
-  padding:5px;
   font-size:16px;
 }
 #main-title {
@@ -31,12 +38,19 @@ body {
   text-shadow: 3px 3px 0 #ffd217, 5px 5px 0 #5ac7ff, 10px 10px 0 #ffd217, 20px 20px 0 #5ac7ff;
 }
 #main-body {
-  padding-top:40px;
+  position:absolute;
+  top:150px;
+  left:0;
+  padding-top:2%;
   float:left;
-  width:600px;
-  padding-right:135px;
+  width:100%;
+}
+#important {
+  float:left;
 }
 #random-words {
+  padding-left:1%;
+  width:50%;
   font-size:16px;
 }
 a {
@@ -51,8 +65,11 @@ a:hover {
   margin-top:100px;
 }
 #twitter {
-  margin-top:40px;
-  float:left;
+  margin-right:2%;
+  float:right;
+  width:20%;
+  padding:2%;
+  border: solid lightgray 1px;
 }
 #feed-name {
   font-size:20px;
@@ -62,11 +79,6 @@ a:hover {
   font-size:12px;
   line-height:1.8em;
   color:#575757;
-}
-#twitter {
-  padding:10px;
-  width:200px;
-  border: solid lightgray 1px;
 }
 .nivoSlider {
   position:relative;
@@ -97,5 +109,5 @@ font-weight:bold;
 #main-footer p {
 padding-top:10px;
 padding-bottom:10px;
-padding-left:400px;
+padding-left:45%;
 }
