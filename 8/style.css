@@ -1,27 +1,32 @@
 body {
   width:100%
-  margin:0 auto; 
-}
-#header-wrapper {
-  position:absolute;
-  top:0;
-  left:0;
+  margin:0 auto;
+  background-color:lightgray;
 }
 
-#main-header {
-  float:left;
+#header-wrapper {
+  width:100%;
+}
+#main-title {
+  line-height:1em;
+  padding-left:
+  font-size:80px;
+  padding:2%;
+  text-shadow: 3px 3px 0 #ffd217, 5px 5px 0 #5ac7ff, 10px 10px 0 #ffd217, 20px 20px 0 #5ac7ff;
 }
 #main-nav {
-  clear:both;
-  float:left;
-  top:120px;
   background-color:#575757;
   width:100%;
+  height:40px;
+}
+#nav-list {
+  padding-left:15%;
+  padding-right:15%;
 }
 #nav-list li {
   float:left;
-  padding-left:110px;
-  padding-right:110px;
+  padding-left:7%;
+  padding-right:7%;
   display:inline;
   padding-top:10px;
   padding-bottom:10px;
@@ -32,24 +37,16 @@ body {
   color:white;
   font-size:16px;
 }
-#main-title {
-  font-size:60px;
-  padding:40px;
-  text-shadow: 3px 3px 0 #ffd217, 5px 5px 0 #5ac7ff, 10px 10px 0 #ffd217, 20px 20px 0 #5ac7ff;
+#nav-list a:hover {
+  color:lightgray;
 }
-#main-body {
-  position:absolute;
-  top:150px;
-  left:0;
-  padding-top:2%;
+
+#left-side {
   float:left;
-  width:100%;
+  padding:2%;
+  width:75%;
 }
-#important {
-  float:left;
-}
-#random-words {
-  padding-left:1%;
+#random-words p {
   width:50%;
   font-size:16px;
 }
@@ -58,27 +55,12 @@ a {
   color:black;
 }
 a:hover {
-  color:lightgray;
+  color:#575757;
+  text-decoration:none;
 }
 #slider {
   margin-left:40px;
   margin-top:100px;
-}
-#twitter {
-  margin-right:2%;
-  float:right;
-  width:20%;
-  padding:2%;
-  border: solid lightgray 1px;
-}
-#feed-name {
-  font-size:20px;
-  color:#321239;
-}
-#feed {
-  font-size:12px;
-  line-height:1.8em;
-  color:#575757;
 }
 .nivoSlider {
   position:relative;
@@ -96,11 +78,34 @@ a:hover {
   border:0;
   display:block;
 }
+
+#right-side {
+  float:right;
+  width:20%;
+  background-color:white;
+  margin-right:1%;
+  margin-top:10px;
+  border-radius:10px;
+  padding-top:1%;
+  margin-bottom:10px;
+}
+#links h1 {
+  padding-left:6%;
+  padding-right:6%;
+}
+#links ul {
+  padding-left:10%;
+  padding-right:10%;
+}
+#links li {
+  padding:2%;
+  display:inline;
+}
+
 #main-footer {
 clear:both;
 height:50px;
 width:100%;
-float:left;
 background-color:#575757;
 color:white;
 font-size:12px;

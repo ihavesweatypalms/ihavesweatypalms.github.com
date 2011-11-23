@@ -12,81 +12,72 @@
 	<link rel='stylesheet' href='style.css' type='text/css' media='screen' />
 </head>
 <body>
-<script>
-  $(document).ready(function() {
-    var username = 'certaintragedy';
-    var count = 10;
-    $.getJSON('http://twitter.com/statuses/user_timeline/certaintragedy.json?callback=?',
-    function(data){
-    $('#feed-name').text(username + "'s twitter feed");
-    $('#feed').text(data[0].text);
-    $.each(data,function() {
-      var ify = function() {
-  return {
-    "link": function(t) {
-      return t.replace(/(^|\s+)(https*\:\/\/\S+[^\.\s+])/g, function(m, m1, link) {
-        return m1 + '<a href=' + link + '>' + ((link.length > 25) ? link.substr(0, 24) + '...' : link) + '</a>';
-      });
-    },
-    "at": function(t) {
-      return t.replace(/(^|\s+)\@([a-zA-Z0-9_]{1,15})/g, function(m, m1, m2) {
-        return m1 + '@<a href="http://twitter.com/' + m2 + '">' + m2 + '</a>';
-      });
-    },
-    "hash": function(t) {
-      return t.replace(/(^|\s+)\#([a-zA-Z0-9_]+)/g, function(m, m1, m2) {
-        return m1 + '#<a href="http://search.twitter.com/search?q=%23' + m2 + '">' + m2 + '</a>';
-      });
-    },
-    "clean": function(tweet) {
-      return this.hash(this.at(this.link(tweet)));
-    }
-  };
-}();
-      
-      $('<div></div>').html(ify.clean(this.text)).appendTo('#feed');
-    	});
-	});
-  });
-$(window).load(function() {
-    $('#slider').nivoSlider();
-});
-</script>
-<div id='header-wrapper'>
-<header id='main-header'>
-<h1 id='main-title'>Christine Varriale is weird</h1>
+<header id='header-wrapper'>
+	<h1 id='main-title'>Christine Varriale is weird</h1>
+		<nav id='main-nav'>
+			<ul id='nav-list'>
+				<li><a href='http://www.ihavesweatypalms.github.com/8/learn'>Learn</a></li>
+				<li><a href='http://www.ihavesweatypalms.github.com/8/read'>Read</a></li>
+				<li><a href='http://www.ihavesweatypalms.github.com/8/see'>See</a></li>
+				<li><a href='http://ihavesweatypalms.github.com/8/watch'>Watch</a></li>
+				<li><a href='http://ihavesweatypalms.github.com/8/contact'>Contact</a></li>
+			</ul>
+		</nav>
 </header>
-<nav id='main-nav'>
-<ul id='nav-list'>
-<li><a href='http://www.christinevarriale.com/learn'>Learn</a></li>
-<li><a href='http://www.christinevarriale.com/read'>Read</a></li>
-<li><a href='http://www.christinevarriale.com/see'>See</a></li>
-<li><a href='http://www.christinevarriale.com/watch'>Watch</a></li>
-<li><a href='http://www.christinevarriale.com/contact'>Contact</a></li>
-</ul>
-</nav>
-</div>
-<div id='important'>
-<section id='main-body'>
-<article id='random-words'><p> This is Christine. She loves puppies, Ryan Gosling, Lindsay Lohan and vegetable dumplings. She makes videos sometimes at <a href='http://www.gemvara.com'>Gemvara</a> and reviews bands at <a href='http://www.allstonpudding.com'>Allston Pudding</a>. Social Media is her life.</p>
-</article>
-<article class="slider-wrapper theme-default">
-<div id="slider" class="nivoSlider">
-    <img src="images/occupyallston1.jpg" alt="occupyallston" title="I love Halloween"/>
-    <img src="images/dunkinhalloween.jpg" alt="dunk-halloween" title="A Very Dunkin Halloween" /></a>
-    <img src="images/analogtweet.jpg" alt="analog-tweet" title="Analog Tweeting" />
-</div>
-</article>
-</div>
-<section id='twitter'>
-<h1 id='feed-name'></h1>
-<div id='feed'>
-
-</div>
-</section>
-</section>
+	<section id='left-side'>
+		<article id='random-words'>
+			<p> This is Christine. She loves puppies, Ryan Gosling, Lindsay Lohan and vegetable dumplings. She makes videos sometimes at <a href='http://www.gemvara.com'>Gemvara</a>, writes about bars and art at <a href='http://www.boston.com/TNGG'>TNGG Boston</a> and reviews bands at <a href='http://www.allstonpudding.com'>Allston Pudding</a>. Social Media is her life.</p>
+		</article>
+		<article class="slider-wrapper theme-default">
+			<div id="slider" class="nivoSlider">
+    			<img src="images/occupyallston1.jpg" alt="occupyallston" title="I love Halloween"/>
+    			<img src="images/dunkinhalloween.jpg" alt="dunk-halloween" title="A Very Dunkin Halloween" /></a>
+    			<img src="images/analogtweet.jpg" alt="analog-tweet" title="Analog Tweeting" />
+			</div>
+		</article>
+	</section>
+	<section id='right-side'>
+		<article id='links'>
+			<h1>I'm on the Internet</h1>
+			<ul>
+				<li><a href='www.facebook.com/ihavesweatypalms'><img src='images/facebooklogo.gif' /></a></li>
+				<li><a href='www.linkedin.com/in/christinevarriale'><img src='images/linkedinlogo.jpeg' /></a></li>
+				<li><a href='http://www.imdb.com/name/nm3977625/'><img src='images/logoimdb.png' /></a></li>
+			</ul>
+		</article>
+		<article id='twitter'>
+			<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+			new TWTR.Widget({
+			  version: 2,
+			  type: 'profile',
+			  rpp: 5,
+			  interval: 30000,
+			  width: 'auto',
+			  height: 300,
+			  theme: {
+			    shell: {
+			      background: '#575757',
+			      color: '#ffffff'
+			    },
+			    tweets: {
+			      background: '#000000',
+			      color: '#ffffff',
+			      links: '#d4afe6'
+			    }
+			  },
+			  features: {
+			    scrollbar: false,
+			    loop: false,
+			    live: false,
+			    behavior: 'all'
+			  }
+			}).render().setUser('certaintragedy').start();
+			</script>
+		</article>
+	</section>
 <footer id='main-footer'>
-<p>©2011 Christine Varriale</p>
+	<p>©2011 Christine Varriale</p>
 </footer>
 </body>
 </html>
